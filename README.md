@@ -40,15 +40,25 @@ This tests are purely for Playwright features practice to automate interactions 
 ## Structure
 ### Folders
 - tests :file_folder: This folder contains actual test scripts. 
+- services :file_folder: This folder contains pages and steps. Page functions are functions that return Locators or Promises<> that we solve later. We use those functions in the Steps class. The Steps class literally contains the steps that we will do in the test files to execute a test case (add a book to the cart, open the cart, confirm that the book is in the cart).
+
 ### Files
-- .gitignore :page_facing_up: This file helps while using git repository
-- package.json and package-lock.json :page_facing_up:  Those files helps to track dependencies, create a shortcut for running tests, etc.
-- playwright.config.ts :page_facing_up: This is the global configuration file for the Playwright
+- :page_facing_up: .gitignore: This file helps while using git repository
+- :page_facing_up: package.json and package-lock.json: Those files helps to track dependencies, create a shortcut for running tests, etc.
+- :page_facing_up: playwright.config.ts:  This is the global configuration file for the Playwright
+- :page_facing_up: tsconfig.json: This is a config file which helps us avoid some JS syntax errors & use better the TS features.
+- :page_facing_up: environments.json: 
+- :page_facing_up: selectors.json: This is where we store all selectors.
 
 ## Useful Commands
 
-### Run all tests in Playwright
+### Run all tests in Playwright on prod environment
 
 ```shell
-npx playwright test
+npm run test --ENV=prod
+```
+
+### Run tests with TAGs=regression on prod environment
+```shell
+"ENV=$npm_config_ENV TAGS=$npm_config_TAGS playwright test"
 ```

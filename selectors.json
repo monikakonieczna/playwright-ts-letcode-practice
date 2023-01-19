@@ -1,0 +1,10 @@
+{
+    "homePage": {
+        "input": "",
+        "button": ""
+    },
+
+    "inputPage": {
+        "editLink": "a[href='/edit']"
+    }
+}
