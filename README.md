@@ -38,11 +38,12 @@ This tests are purely for Playwright features practice to automate interactions 
 ### Prerequisites
 
 ## Structure
-
+### Folders
 - tests :file_folder: This folder contains actual test scripts. 
-  - .gitignore :page_facing_up: This file helps while using git repository
-  - package.json and package-lock.json :page_facing_up:  Those files helps to track dependencies, create a shortcut for running tests, etc.
-  - playwright.config.ts :page_facing_up: This is the global configuration file for the Playwright
+### Files
+- .gitignore :page_facing_up: This file helps while using git repository
+- package.json and package-lock.json :page_facing_up:  Those files helps to track dependencies, create a shortcut for running tests, etc.
+- playwright.config.ts :page_facing_up: This is the global configuration file for the Playwright
 
 ## Useful Commands
 
