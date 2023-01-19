@@ -12,7 +12,7 @@ test.describe('', () => {
         homePage = new HomePage(page);
         homePageSteps = new HomePageSteps(page, homePage);
 
-        await page.goto('/', {
+        await page.goto('https://letcode.in/test', {
             waitUntil: 'networkidle',
         });
     });
@@ -21,10 +21,3 @@ test.describe('', () => {
         await homePageSteps.clickEdit();
     });
 })
-
-
-
-
-test.beforeEach(async ({ page }) => {
-  await page.goto('https://demo.playwright.dev/todomvc');
-});
