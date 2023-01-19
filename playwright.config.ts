@@ -24,6 +24,7 @@ export const config: PlaywrightTestConfig = {
 
   use: {
     baseURL: env[process.env.ENV],
+    browserName: 'chromium',
     screenshot: 'on',
     acceptDownloads: true,
     trace: 'on',

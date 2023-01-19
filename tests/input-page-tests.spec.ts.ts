@@ -1,12 +1,18 @@
-import { test } from '@playwright/test';
-import * as input from '../test-data/input.json';
+import { test, expect } from '@playwright/test';
+import * as data from '../test-data/input.json';
 import HomePage from '../services/pages/home.page';
 import HomePageSteps from '../services/steps/homepage.steps';
+import InputPage from '../services/pages/input.page';
+import InputPageSteps from '../services/steps/inputpage.steps';
+import { Input } from '../services/enums/input.enum';
 
-test.describe('', () => {
+test.describe('Interactions with inputs elements.', () => {
 
     let homePage: HomePage;
     let homePageSteps: HomePageSteps;
+
+    let inputPage: InputPage;
+    let inputPageSteps: InputPageSteps;
 
     test.beforeEach(async ({page}) => {
         homePage = new HomePage(page);
@@ -15,9 +21,35 @@ test.describe('', () => {
         await page.goto('https://letcode.in/test', {
             waitUntil: 'networkidle',
         });
+
+        await homePageSteps.clickEdit();
+        inputPage = new InputPage(page);
+        inputPageSteps = new InputPageSteps(page, inputPage);
     });
 
-    test('', async ({}) => {
-        await homePageSteps.clickEdit();
+    test('Task 1: Enter your full name', async ({page}) => {
+        await inputPageSteps.enterFullName(data.name);
+        //expect(inputPageSteps.getTextFromInput(Input.FULLNAME)).toBe(data.name);
+    });
+    
+    test('Task 2: Append a text and press keyboard tab', async ({page}) => {
+        await inputPageSteps.appendText(data.appendText);
+        expect(await inputPageSteps.getTextFromInput(Input.APPENDED_TEXT)).toBe("I am good");
+    });
+
+    test('Task 3: What is inside the text box', async ({page}) => {
+        expect(await inputPageSteps.getTextFromInput(Input.TEXTBOX)).toBe("ortonikc");
+    });
+
+    test('Task 4: Clear the text', async ({page}) => {
+        await inputPageSteps.clearText(Input.CLEAR_TEXT);
+    });
+
+    test('Task 5: Confirm edit field is disabled', async ({page}) => {
+        expect(await inputPageSteps.isDisabled(Input.EDIT_FIELD)).toBe(true);
+    });
+
+    test('Task 6: Confirm text is readonly', async ({page}) => {
+        expect(await inputPageSteps.isEditable(Input.READONLY)).toBe(false);
     });
 })

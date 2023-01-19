@@ -1,10 +1,14 @@
 {
     "homePage": {
-        "input": "",
-        "button": ""
+        "inputLink": "a[href='/edit']"
     },
 
     "inputPage": {
-        "editLink": "a[href='/edit']"
+        "nameInput": "#fullName",
+        "appeendInput": "#join",
+        "textboxInput": "#getMe",
+        "clearTextInput": "#clearMe",
+        "editFieldInput": "#noEdit",
+        "readonlyInput": "#dontwrite"
     }
 }

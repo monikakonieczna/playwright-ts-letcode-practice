@@ -8,7 +8,7 @@ export default class HomePage {
 
     private page: Page;
 
-    public getInput(): Locator {
-        return this.page.locator(selectors.inputPage.editLink);
+    public getInputLink(): Locator {
+        return this.page.locator(selectors.homePage.inputLink);
     }
 }

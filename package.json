@@ -8,7 +8,7 @@
     "test": "playwright test"
   },
   "keywords": [],
-  "author": "",
+  "author": "Monika",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.29.2"

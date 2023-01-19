@@ -11,6 +11,6 @@ export default class HomePageSteps {
     private homePage: HomePage;
 
     async clickEdit() {
-        await this.homePage.getInput().click();
+        await this.homePage.getInputLink().click();
     }
 }
