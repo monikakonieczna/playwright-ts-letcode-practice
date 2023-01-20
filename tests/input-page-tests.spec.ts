@@ -6,7 +6,7 @@ import InputPage from '../services/pages/input.page';
 import InputPageSteps from '../services/steps/inputpage.steps';
 import { Input } from '../services/enums/input.enum';
 
-test.describe('Interactions with inputs elements.', () => {
+test.describe('Interactions with inputs elements. @input', () => {
 
     let homePage: HomePage;
     let homePageSteps: HomePageSteps;
@@ -22,7 +22,7 @@ test.describe('Interactions with inputs elements.', () => {
             waitUntil: 'networkidle',
         });
 
-        await homePageSteps.clickEdit();
+        await homePageSteps.navigateToInputPage();
         inputPage = new InputPage(page);
         inputPageSteps = new InputPageSteps(page, inputPage);
     });

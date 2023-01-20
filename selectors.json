@@ -1,6 +1,7 @@
 {
     "homePage": {
-        "inputLink": "a[href='/edit']"
+        "inputLink": "a[href='/edit']",
+        "selectLink": "a[href='/dropdowns']"
     },
 
     "inputPage": {
@@ -10,5 +11,14 @@
         "clearTextInput": "#clearMe",
         "editFieldInput": "#noEdit",
         "readonlyInput": "#dontwrite"
+    },
+
+    "selectPage": {
+        "fruitsSelect": "#fruits",
+        "fruitNotification": ".card-content .field:first-child p",
+        "superherosSelect": "#superheros",
+        "notification": ".card-content .field:nth-child(2) p",
+        "languageSelect": "#lang",
+        "countrySelect": "#country"
     }
 }

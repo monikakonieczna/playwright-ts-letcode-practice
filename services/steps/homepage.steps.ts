@@ -10,7 +10,11 @@ export default class HomePageSteps {
     private page: Page;
     private homePage: HomePage;
 
-    async clickEdit() {
+    async navigateToInputPage() {
         await this.homePage.getInputLink().click();
     }
+    async navigateToSelectPage() {
+        await this.homePage.getSelectLink().click();
+    }
+
 }

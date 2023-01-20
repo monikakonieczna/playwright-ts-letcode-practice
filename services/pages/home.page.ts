@@ -11,4 +11,8 @@ export default class HomePage {
     public getInputLink(): Locator {
         return this.page.locator(selectors.homePage.inputLink);
     }
+
+    public getSelectLink(): Locator {
+        return this.page.locator(selectors.homePage.selectLink);
+    }
 }

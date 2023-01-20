@@ -31,8 +31,6 @@ export const config: PlaywrightTestConfig = {
     headless: false,
   },
 
-  grep: [new RegExp(process.env.TAGS)],
-
   retries: 1,
 
 };
