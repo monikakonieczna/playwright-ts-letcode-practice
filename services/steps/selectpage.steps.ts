@@ -1,6 +1,7 @@
 import { Locator, Page } from "@playwright/test";
 import SelectPage from '../pages/select.page';
 import { Select } from '../enums/select.enum';
+import { Notification } from '../enums/notification.enum';
 
 export default class SelectPageSteps {
     constructor(page: Page, selectPage: SelectPage){
@@ -34,14 +35,19 @@ export default class SelectPageSteps {
         ]);
     }
 
-    async printSelectCount(select: Select) {
+    async getSelectCount(select: Select) {
         const dropdown = this.selectPage.getSelect(select);
-        console.log(await dropdown.count());
+        return await this.selectPage.getCountedOptions(select);
     }
 
     async printSelectedValue(select: Select){
-        const text = await this.selectPage.getSelectedValue();
+        const text = await this.selectPage.getSelectedValue(select);
         console.log(text);
+        return text;
+    }
+
+    async getNotificationMessage(notification: Notification) {
+       return this.selectPage.getNotification(notification).textContent();
     }
 
 }

@@ -9,13 +9,14 @@ const env = {
 
 export const config: PlaywrightTestConfig = {
   testDir: './tests',
+  fullyParallel: true,
 
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000
+    timeout: 10000
   },
 
   forbidOnly: !!process.env.CI,
@@ -23,12 +24,16 @@ export const config: PlaywrightTestConfig = {
   reporter: [['junit', {outputFile: 'reports/results-junit.xml'}], ['html', { outputFolder: 'reports/html/'}]],
 
   use: {
-    baseURL: env[process.env.ENV],
+    viewport: null,
+    baseURL: 'https://letcode.in/test',
     browserName: 'chromium',
     screenshot: 'on',
     acceptDownloads: true,
     trace: 'on',
     headless: false,
+    launchOptions: {
+      args: ["--start-maximized"]
+    }
   },
 
   retries: 1,

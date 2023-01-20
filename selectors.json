@@ -15,9 +15,9 @@
 
     "selectPage": {
         "fruitsSelect": "#fruits",
-        "fruitNotification": ".card-content .field:first-child p",
+        "fruitNotification": ".card-content .field:first-child div[class='notification is-success'] p",
         "superherosSelect": "#superheros",
-        "notification": ".card-content .field:nth-child(2) p",
+        "notification": ".card-content .field:nth-child(2) div[class='notification is-success'] p",
         "languageSelect": "#lang",
         "countrySelect": "#country"
     }
