@@ -27,7 +27,7 @@ test.describe('Interactions with dropdown element. @select', () => {
         selectPageSteps = new SelectPageSteps(page, selectPage);
     });
 
-    test('Task 1: Select the apple using visible text', async ({page}) => {
+    test('Task 1: Select the apple using visible text', async ({}) => {
 
         //Select the apple using visible text
         await selectPageSteps.selecttByLabel("Apple", Select.FRUIT);
@@ -40,7 +40,7 @@ test.describe('Interactions with dropdown element. @select', () => {
     
     });
 
-    test('Task 2: Select Black Panther', async ({page}) => {
+    test('Task 2: Select Black Panther', async ({}) => {
     
         //Select Black Panter hero
         await selectPageSteps.selectByValue("bp", Select.HERO);
@@ -52,7 +52,7 @@ test.describe('Interactions with dropdown element. @select', () => {
 
     });
 
-    test('Task 3: Select the last programming language and print all the options', async ({page}) => {
+    test('Task 3: Select the last programming language and print all the options', async ({}) => {
         //Select the last programming language
         let langCounter: any = await selectPageSteps.getSelectCount(Select.LANGUAGE);
         await selectPageSteps.selectByIndex((langCounter - 1), Select.LANGUAGE);
@@ -63,7 +63,12 @@ test.describe('Interactions with dropdown element. @select', () => {
         expect(text).toBe(expectedText);
     });
 
-    test('Task 4: Select India using value & print the selected value', async ({page}) => {
+    test('Task 4: Select India using value', async ({page}) => {
     
+        //Select India country
+        await selectPageSteps.selectByValue("India", Select.COUNTRY);
+
+        //todo: Verify that Indie was chosen
+
     });
 })

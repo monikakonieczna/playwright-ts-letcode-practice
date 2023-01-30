@@ -15,4 +15,16 @@ export default class HomePage {
     public getSelectLink(): Locator {
         return this.page.locator(selectors.homePage.selectLink);
     }
+
+    public getAlertLink(): Locator {
+        return this.page.locator(selectors.homePage.alertLink);
+    }
+
+    public getRadioLink(): Locator {
+        return this.page.locator(selectors.homePage.radioLink);
+    }
+
+    public getWindowLink(): Locator {
+        return this.page.locator(selectors.homePage.windowLink);
+    }
 }

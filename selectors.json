@@ -1,7 +1,10 @@
 {
     "homePage": {
         "inputLink": "a[href='/edit']",
-        "selectLink": "a[href='/dropdowns']"
+        "selectLink": "a[href='/dropdowns']",
+        "alertLink": "a[href='/alert']",
+        "radioLink": "a[href='/radio']",
+        "windowLink": "a[href='/windows']"
     },
 
     "inputPage": {
@@ -20,5 +23,13 @@
         "notification": ".card-content .field:nth-child(2) div[class='notification is-success'] p",
         "languageSelect": "#lang",
         "countrySelect": "#country"
+    },
+
+    "alertPage": {
+        "simpleAlertButton": "#accept",
+        "confirmAlertButton": "#confirm",
+        "promptAlertButton": "#prompt",
+        "modernAlertButton": "#modern",
+        "notification": "#myName"
     }
 }
