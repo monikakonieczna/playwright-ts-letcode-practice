@@ -9,6 +9,16 @@ export default class InputPage {
 
     private page: Page;
 
+    inputMap = new Map<Input, string>([
+        [Input.APPENDED_TEXT, selectors.inputPage.appeendInput],
+        [Input.CLEAR_TEXT, selectors.inputPage.clearTextInput],
+        [Input.EDIT_FIELD, selectors.inputPage.editFieldInput],
+        [Input.FULLNAME, selectors.inputPage.nameInput],
+        [Input.READONLY, selectors.inputPage.readonlyInput],
+        [Input.TEXTBOX, selectors.inputPage.textboxInput],
+    ]
+    );
+
     public getNameInput(): Locator {
         return this.page.locator(selectors.inputPage.nameInput);
     }
@@ -34,28 +44,7 @@ export default class InputPage {
     }
 
     public getInput(element: Input): Locator {
-        switch(element) {
-            case Input.FULLNAME: {
-                return this.page.locator(selectors.inputPage.nameInput);
-            }
-            case Input.APPENDED_TEXT: {
-                return this.page.locator(selectors.inputPage.appeendInput);
-            }
-            case Input.TEXTBOX: {
-                return this.page.locator(selectors.inputPage.textboxInput);
-            }
-            case Input.CLEAR_TEXT: {
-                return this.page.locator(selectors.inputPage.clearTextInput);
-            }
-            case Input.EDIT_FIELD: {
-                return this.page.locator(selectors.inputPage.editFieldInput);
-            }
-            case Input.EDIT_FIELD: {
-                return this.page.locator(selectors.inputPage.editFieldInput);
-            }
-            case Input.READONLY: {
-                return this.page.locator(selectors.inputPage.readonlyInput);
-            }
-        }
+        return this.page.locator(this.inputMap.get(element));
     }
+    
 }

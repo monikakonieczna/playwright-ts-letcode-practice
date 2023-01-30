@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { Page } from "@playwright/test";
 import HomePage from '../pages/home.page';
 
 export default class HomePageSteps {
@@ -10,7 +10,22 @@ export default class HomePageSteps {
     private page: Page;
     private homePage: HomePage;
 
-    async clickEdit() {
+    async navigateToInputPage() {
         await this.homePage.getInputLink().click();
     }
+    async navigateToSelectPage() {
+        await this.homePage.getSelectLink().click();
+    }
+    async navigateToAlertPage() {
+        await this.homePage.getAlertLink().click();
+    }
+    async navigateToRadioPage() {
+        await this.homePage.getRadioLink().click();
+    }
+    async navigateToWindowPage() {
+        await this.homePage.getWindowLink().click();
+    }
+
+
+
 }
