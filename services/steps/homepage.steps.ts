@@ -25,6 +25,9 @@ export default class HomePageSteps {
     async navigateToWindowPage() {
         await this.homePage.getWindowLink().click();
     }
+    async navigateToDropPage() {
+        await this.homePage.getDropLink().click();
+    }
 
 
 

@@ -27,4 +27,8 @@ export default class HomePage {
     public getWindowLink(): Locator {
         return this.page.locator(selectors.homePage.windowLink);
     }
+
+    public getDropLink(): Locator {
+        return this.page.locator(selectors.homePage.dropLink);
+    }
 }

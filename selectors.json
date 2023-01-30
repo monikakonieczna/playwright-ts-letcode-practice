@@ -4,7 +4,8 @@
         "selectLink": "a[href='/dropdowns']",
         "alertLink": "a[href='/alert']",
         "radioLink": "a[href='/radio']",
-        "windowLink": "a[href='/windows']"
+        "windowLink": "a[href='/windows']",
+        "dropLink": "a[href='/dropable']"
     },
 
     "inputPage": {
@@ -45,5 +46,11 @@
         "fifthRadioMaybe": ".field:nth-of-type(5) #maybe",
         "rememberCheckbox": ".field:nth-of-type(6) .checkbox",
         "termsCheckbox": ".field:nth-of-type(7) .checkbox"
+    },
+
+    "dropPage": {
+        "sourceElement": "#draggable",
+        "destinationElement": "#droppable",
+        "destinationMessage": "#droppable>p"
     }
 }
