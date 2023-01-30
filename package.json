@@ -10,6 +10,7 @@
     "test-a": "playwright test -g @alert",
     "test-r": "playwright test -g @radio",
     "test-d": "playwright test -g @drop",
+    "test-sl": "playwright test -g @slider",
     "test": "playwright test"
   },
   "keywords": [],

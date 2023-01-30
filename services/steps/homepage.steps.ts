@@ -28,7 +28,9 @@ export default class HomePageSteps {
     async navigateToDropPage() {
         await this.homePage.getDropLink().click();
     }
-
+    async navigateToSliderPage() {
+        await this.homePage.getSliderLink().click();
+    }
 
 
 }

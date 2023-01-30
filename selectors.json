@@ -5,7 +5,8 @@
         "alertLink": "a[href='/alert']",
         "radioLink": "a[href='/radio']",
         "windowLink": "a[href='/windows']",
-        "dropLink": "a[href='/dropable']"
+        "dropLink": "a[href='/dropable']",
+        "sliderLink": "a[href='/slider']"
     },
 
     "inputPage": {
@@ -52,5 +53,12 @@
         "sourceElement": "#draggable",
         "destinationElement": "#droppable",
         "destinationMessage": "#droppable>p"
+    },
+
+    "sliderPage": {
+        "countriesButton": "button[class='button is-primary']",
+        "sliderHandler": "#generate",
+        "notificationBox": "div>.has-text-primary-light",
+        "wordLimitInfo": "h1[class*='subtitle']"
     }
 }
