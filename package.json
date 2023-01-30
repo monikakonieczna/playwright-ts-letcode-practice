@@ -8,6 +8,7 @@
     "test-i": "playwright test -g @input",
     "test-s": "playwright test -g @select",
     "test-a": "playwright test -g @alert",
+    "test-r": "playwright test -g @radio",
     "test": "playwright test"
   },
   "keywords": [],
