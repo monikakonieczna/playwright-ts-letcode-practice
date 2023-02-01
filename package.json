@@ -11,6 +11,7 @@
     "test-r": "playwright test -g @radio",
     "test-d": "playwright test -g @drop",
     "test-sl": "playwright test -g @slider",
+    "test-t": "playwright test -g @table",
     "test": "playwright test"
   },
   "keywords": [],

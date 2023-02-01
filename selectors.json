@@ -6,7 +6,13 @@
         "radioLink": "a[href='/radio']",
         "windowLink": "a[href='/windows']",
         "dropLink": "a[href='/dropable']",
-        "sliderLink": "a[href='/slider']"
+        "sliderLink": "a[href='/slider']",
+        "tableLink": "a[href='/table']",
+        "advancedTableLink": "a[href='/advancedtable']",
+        "calendarLink": "a[href='/calendar']",
+        "formLink": "a[href='/forms']",
+        "fileLink": "a[href='/file']",
+        "shadowLink": "a[href='/shadow']"
     },
 
     "inputPage": {
@@ -60,5 +66,12 @@
         "sliderHandler": "#generate",
         "notificationBox": "div>.has-text-primary-light",
         "wordLimitInfo": "h1[class*='subtitle']"
+    },
+    
+    "tablePage": {
+        "shoppingList": "#shopping tbody",
+        "attendanceList": " ",
+        "sortableTable": " ",
+        "totalPrice": "#shopping tfoot b"
     }
 }

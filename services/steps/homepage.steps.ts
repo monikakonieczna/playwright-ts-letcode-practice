@@ -31,6 +31,9 @@ export default class HomePageSteps {
     async navigateToSliderPage() {
         await this.homePage.getSliderLink().click();
     }
+    async navigateToTablePage() {
+        await this.homePage.getTableLink().click();
+    }
 
 
 }
