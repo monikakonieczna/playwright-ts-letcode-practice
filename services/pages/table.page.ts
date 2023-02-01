@@ -26,12 +26,26 @@ export default class TablePage {
     public getShoppingList(): Locator {
         return this.page.locator(selectors.tablePage.shoppingList);
     }
-    public getSortableTable(): Locator {
-        return this.page.locator(selectors.tablePage.sortableTable);
+    public async getSortableTable() {
+
+        const dataBefore = await this.page.$$eval(selectors.tablePage.dessertRows, (rows) => {
+            return rows.map( row => {
+                const cells = row.querySelectorAll('td:first-of-type');
+                return Array.from(cells).map(cell => cell.textContent);
+            })
+        });
+
+        console.log(dataBefore);
     }
+
 
     public getTotalSum(): Locator {
         return this.page.locator(selectors.tablePage.totalPrice);
+    }
+
+    public getStortDessert():Locator {
+        return this.page.locator(selectors.tablePage.sortDessert);
+
     }
 
 }

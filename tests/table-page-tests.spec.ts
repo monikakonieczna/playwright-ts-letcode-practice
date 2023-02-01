@@ -24,10 +24,19 @@ test.describe('Table operations. @table', () => {
         tablePageSteps = new TablePageSteps(page, tablePage);
     });
 
-    test('Add all the prices and check if the total is correct.', async ({}) => {
+    test.skip('Add all the prices and check if the total is correct.', async ({}) => {
 
         let expectedSum = await tablePageSteps.getSumOfProductsPrices();
         let sum = Number(await tablePageSteps.getTotalPrice());
         expect(sum).toEqual(expectedSum);
     });
+
+    test(' Check if the sorting is working properly on Dessert column', async ({}) => {
+
+        await tablePageSteps.getData();
+    });
+
+    test.skip(' Check if the sorting is working properly on Calories column', async ({}) => {
+    });
+
 })

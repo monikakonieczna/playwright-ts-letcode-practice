@@ -1,4 +1,4 @@
-import { expect, Page } from "@playwright/test";
+import { expect, Page, selectors } from "@playwright/test";
 import TablePage from '../pages/table.page';
 
 export default class TablePageSteps {
@@ -21,6 +21,15 @@ export default class TablePageSteps {
 
     async getTotalPrice(){
         return (await this.tablePage.getTotalSum().textContent()).trim();
+    }
+
+    async sortDesserts(){
+        await this.tablePage
+    }
+
+
+    async getData(){
+        await this.tablePage.getSortableTable();
     }
 
 }
