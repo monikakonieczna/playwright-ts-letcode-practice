@@ -74,5 +74,11 @@
         "dessertRows": "table tr[class='ng-star-inserted']",
         "sortDessert": "th[mat-sort-header='name'] div[role='button']",
         "totalPrice": "#shopping tfoot b"
+    },
+
+    "filePage": {
+        "downloadExcelButton": "#xls",
+        "downloadPDFButton": "#pdf",
+        "downloadTextButton": "#txt"
     }
 }
