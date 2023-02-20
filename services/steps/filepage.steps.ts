@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 import FilePage from '../pages/file.page';
 
 export default class FilePageSteps {
@@ -11,15 +11,42 @@ export default class FilePageSteps {
     private filePage: FilePage;
 
     async downloadExcel() {
-        await this.filePage.getDownloadExcelButton().click();
+        const [download] = await Promise.all(
+            [
+                this.page.waitForEvent('download'),
+                this.filePage.getDownloadExcelButton().click(),
+            ])
+
+        const suggestedFileName = download.suggestedFilename();
+        const filePath = 'download/' + suggestedFileName;
+        await download.saveAs(filePath);
+        return filePath;
     }
 
     async downloadPdf() {
-        await this.filePage.getDownloadPdfButton().click();
+        const [download] = await Promise.all(
+            [
+                this.page.waitForEvent('download'),
+                this.filePage.getDownloadPdfButton().click(),
+            ])
+
+        const suggestedFileName = download.suggestedFilename();
+        const filePath = 'download/' + suggestedFileName;
+        await download.saveAs(filePath);
+        return filePath;
     }
 
     async downloadText() {
-        await this.filePage.getDownloadTextButton().click();
+        const [download] = await Promise.all(
+            [
+                this.page.waitForEvent('download'),
+                this.filePage.getDownloadTextButton().click(),
+            ])
+
+        const suggestedFileName = download.suggestedFilename();
+        const filePath = 'download/' + suggestedFileName;
+        await download.saveAs(filePath);
+        return filePath;
     }
 
 }

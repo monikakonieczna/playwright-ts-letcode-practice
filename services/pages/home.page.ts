@@ -39,4 +39,8 @@ export default class HomePage {
     public getTableLink(): Locator {
         return this.page.locator(selectors.homePage.tableLink);
     }
+
+    public getFileLink(): Locator {
+        return this.page.locator(selectors.homePage.fileLink);
+    }
 }

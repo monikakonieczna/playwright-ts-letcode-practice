@@ -24,7 +24,7 @@ export default class TablePageSteps {
     }
 
     async sortDesserts(){
-        await this.tablePage
+        await this.tablePage.getStortDessert();
     }
 
 

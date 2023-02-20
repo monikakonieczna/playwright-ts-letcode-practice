@@ -2,7 +2,7 @@ import { Page } from "@playwright/test";
 import HomePage from '../pages/home.page';
 
 export default class HomePageSteps {
-    constructor(page: Page, homePage: HomePage){
+    constructor(page: Page, homePage: HomePage) {
         this.page = page;
         this.homePage = homePage;
     }
@@ -33,6 +33,9 @@ export default class HomePageSteps {
     }
     async navigateToTablePage() {
         await this.homePage.getTableLink().click();
+    }
+    async navigateToFilePage() {
+        await this.homePage.getFileLink().click();
     }
 
 

@@ -3,9 +3,10 @@ import HomePage from '../services/pages/home.page';
 import HomePageSteps from '../services/steps/homepage.steps';
 import FilePage from '../services/pages/file.page';
 import FilePageSteps from '../services/steps/filepage.steps';
+import * as fs from 'fs';
 
 
-test.describe('Downloading files. @drop', () => {
+test.describe('Downloading files. @file', () => {
 
     let homePage: HomePage;
     let homePageSteps: HomePageSteps;
@@ -19,17 +20,23 @@ test.describe('Downloading files. @drop', () => {
 
         await page.goto('https://letcode.in/test');
 
-        //await homePageSteps.navigateToFilePage(); - not implemented yet
+        await homePageSteps.navigateToFilePage();
         filePage = new FilePage(page);
         filePageSteps = new FilePageSteps(page, filePage);
     });
 
-    test('Download Excel File.', async ({}) => {
+    test('Download a single excel file and assert.', async ({}) => {
+        const filePath = await filePageSteps.downloadExcel();
+        expect(fs.existsSync(filePath)).toBeTruthy();
     });
 
-    test('Download Pdf File.', async ({}) => {
+    test('Download single pdf file and assert.', async ({}) => {
+        const filePath = await filePageSteps.downloadPdf();
+        expect(fs.existsSync(filePath)).toBeTruthy();
     });
 
-    test('Download Text File.', async ({}) => {
+    test('Download single text file and assert.', async ({}) => {
+        const filePath = await filePageSteps.downloadText();
+        expect(fs.existsSync(filePath)).toBeTruthy();
     });
 })
