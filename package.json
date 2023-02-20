@@ -4,12 +4,14 @@
   "description": "<h1>\r   Practice test automation with <a href=\"https://playwright.dev/\"> <img width=\"140\" alt=\"Playwright Logo\" src=\"https://raw.githubusercontent.com/github/explore/60cd2530141f67f07a947fa2d310c482e287e387/topics/playwright/playwright.png\" /> </a> on <a href=\"https://letcode.in/test\">Let Code</a>\r </h1>",
   "main": "index.js",
   "scripts": {
-    "test-env": "ENV=$npm_config_ENV playwright test",
     "test-i": "playwright test -g @input",
     "test-s": "playwright test -g @select",
     "test-a": "playwright test -g @alert",
     "test-r": "playwright test -g @radio",
     "test-d": "playwright test -g @drop",
+    "test-sl": "playwright test -g @slider",
+    "test-t": "playwright test -g @table",
+    "test-f": "playwright test -g @file",
     "test": "playwright test"
   },
   "keywords": [],

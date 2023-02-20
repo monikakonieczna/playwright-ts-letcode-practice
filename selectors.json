@@ -5,7 +5,14 @@
         "alertLink": "a[href='/alert']",
         "radioLink": "a[href='/radio']",
         "windowLink": "a[href='/windows']",
-        "dropLink": "a[href='/dropable']"
+        "dropLink": "a[href='/dropable']",
+        "sliderLink": "a[href='/slider']",
+        "tableLink": "a[href='/table']",
+        "advancedTableLink": "a[href='/advancedtable']",
+        "calendarLink": "a[href='/calendar']",
+        "formLink": "a[href='/forms']",
+        "fileLink": "a[href='/file']",
+        "shadowLink": "a[href='/shadow']"
     },
 
     "inputPage": {
@@ -52,5 +59,26 @@
         "sourceElement": "#draggable",
         "destinationElement": "#droppable",
         "destinationMessage": "#droppable>p"
+    },
+
+    "sliderPage": {
+        "countriesButton": "button[class='button is-primary']",
+        "sliderHandler": "#generate",
+        "notificationBox": "div>.has-text-primary-light",
+        "wordLimitInfo": "h1[class*='subtitle']"
+    },
+    
+    "tablePage": {
+        "shoppingList": "#shopping tbody",
+        "attendanceList": " ",
+        "dessertRows": "table tr[class='ng-star-inserted']",
+        "sortDessert": "th[mat-sort-header='name'] div[role='button']",
+        "totalPrice": "#shopping tfoot b"
+    },
+
+    "filePage": {
+        "downloadExcelButton": "#xls",
+        "downloadPDFButton": "#pdf",
+        "downloadTextButton": "#txt"
     }
 }

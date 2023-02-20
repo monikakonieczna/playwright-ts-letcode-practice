@@ -40,7 +40,9 @@ This tests are purely for Playwright features practice to automate interactions 
 ## Structure
 ### Folders
 - tests :file_folder: This folder contains actual test scripts. 
-- services :file_folder: This folder contains pages and steps. Page functions are functions that return Locators or Promises<> that we solve later. We use those functions in the Steps class. The Steps class literally contains the steps that we will do in the test files to execute a test case (add a book to the cart, open the cart, confirm that the book is in the cart).
+- services :file_folder: This folder containse enums,pages and steps. Page functions are functions that return Locators or Promises<> that we solve later. We use those functions in the Steps class. The Steps class literally contains the steps that we will do in the test files to execute a test case (add a book to the cart, open the cart, confirm that the book is in the cart).
+- download :file_folder: This folder contains downloaded files for testing purposes.
+- test-data :file_folder: This folder contains files with test data.
 
 ### Files
 - :page_facing_up: .gitignore: This file helps while using git repository
@@ -51,14 +53,40 @@ This tests are purely for Playwright features practice to automate interactions 
 - :page_facing_up: selectors.json: This is where we store all selectors.
 
 ## Useful Commands
-
-### Run all tests in Playwright on prod environment
-
+### Run all tests in Playwright
 ```shell
-npm run test --ENV=prod
+npm run test
 ```
-
-### Run tests with TAGs=regression on prod environment
+### Run tests with TAGs
+## Tag = @alert 
 ```shell
-"ENV=$npm_config_ENV TAGS=$npm_config_TAGS playwright test"
+npm run test-a
+```
+## Tag = @drop
+```shell
+npm run test-d
+```
+## Tag = @input
+```shell
+npm run test-i
+```
+## Tag = @select
+```shell
+npm run test-s
+```
+## Tag = @radio
+```shell
+npm run test-r
+```
+## Tag = @slider
+```shell
+npm run test-sl
+```
+## Tag = @table
+```shell
+npm run test-t
+```
+## Tag = @file
+```shell
+npm run test-f
 ```
