@@ -12,6 +12,7 @@
     "test-sl": "playwright test -g @slider",
     "test-t": "playwright test -g @table",
     "test-f": "playwright test -g @file",
+    "test-fo": "playwright test -g @form",
     "test": "playwright test"
   },
   "keywords": [],

@@ -37,6 +37,9 @@ export default class HomePageSteps {
     async navigateToFilePage() {
         await this.homePage.getFileLink().click();
     }
+    async navigateToFormPage() {
+        await this.homePage.getFormLink().click();
+    }
 
 
 }

@@ -43,4 +43,7 @@ export default class HomePage {
     public getFileLink(): Locator {
         return this.page.locator(selectors.homePage.fileLink);
     }
+    public getFormLink(): Locator {
+        return this.page.locator(selectors.homePage.formLink);
+    }
 }
