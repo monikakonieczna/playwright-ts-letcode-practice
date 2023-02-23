@@ -23,7 +23,7 @@ test.describe('Downloading files. @file', () => {
         filePage = new FilePage(page);
         filePageSteps = new FilePageSteps(page, filePage);
     });
-    
+
     test('Download a single excel file and assert.', async ({ }) => {
         const expectedFileName = 'sample.xlsx';
         const result = await filePageSteps.downloadExcel();
@@ -33,13 +33,23 @@ test.describe('Downloading files. @file', () => {
         expect((await fs.promises.stat(result[0] as string)).size).toBeGreaterThan(200);
     });
 
-    test('Download single pdf file and assert.', async ({}) => {
-        const filePath = await filePageSteps.downloadPdf();
-        expect(fs.existsSync(filePath)).toBeTruthy();
+    test('Download single pdf file and assert.', async ({ }) => {
+        const expectedFileName = 'sample.pdf';
+        const result = await filePageSteps.downloadPdf();
+
+        expect(fs.existsSync(result[0])).toBeTruthy();
+        expect(result[1]).toBe(expectedFileName);
+        console.log(((await fs.promises.stat(result[0] as string)).size));
+        expect((await fs.promises.stat(result[0] as string)).size).toBeGreaterThan(200);
     });
 
-    test.skip('Download single text file and assert.', async ({ }) => {
-        const filePath = await filePageSteps.downloadText();
-        expect(fs.existsSync(filePath)).toBeTruthy();
+    test('Download single text file and assert.', async ({ }) => {
+        const expectedFileName = 'sample.txt';
+        const result = await filePageSteps.downloadText();
+
+        expect(fs.existsSync(result[0])).toBeTruthy();
+        expect(result[1]).toBe(expectedFileName);
+        console.log(((await fs.promises.stat(result[0] as string)).size));
+        expect((await fs.promises.stat(result[0] as string)).size).toBeGreaterThan(200);
     });
 })
