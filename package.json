@@ -20,5 +20,10 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.29.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "faker": "^5.5.3",
+    "mocker-data-generator": "^3.0.1"
   }
 }

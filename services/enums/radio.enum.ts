@@ -9,7 +9,10 @@ export enum Radio {
     BAR,
     GOING,
     NOT_GOING,
-    MAYBE
+    MAYBE,
+    FORM_MALE,
+    FORM_FEMALE,
+    FORM_TRANSGENDER
 }
 
 export enum Checkbox{
