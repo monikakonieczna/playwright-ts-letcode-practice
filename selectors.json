@@ -80,5 +80,24 @@
         "downloadExcelButton": "#xls",
         "downloadPDFButton": "#pdf",
         "downloadTextButton": "#txt"
+    },
+
+    "formPage": {
+        "firstnameInput": "#firstname",
+        "lastnameInput": "#lasttname",
+        "emailInput": "#email",
+        "countryCodeSelect": "",
+        "phoneNumberInput": "#Phno",
+        "addressLine1Input": "#Addl1",
+        "addressLine2Input": "#Addl2",
+        "stateInput": "#state",
+        "postalCodeInput": "#postalcode",
+        "countrySelect": "",
+        "dateOfBirthCalendar": "#Date",
+        "genderFemaleRadio": "#female",
+        "genderMaleRadio": "#male",
+        "genderTransgenderRadio": "#trans",
+        "termsCheckbox": "input[type='checkbox']",
+        "submitButton": "input[type='submit']"
     }
 }
