@@ -20,7 +20,7 @@ export default class FilePageSteps {
         const suggestedFileName = download.suggestedFilename();
         const filePath = 'download/' + suggestedFileName;
         await download.saveAs(filePath);
-        return filePath;
+        return [filePath, suggestedFileName];
     }
 
     async downloadPdf() {
