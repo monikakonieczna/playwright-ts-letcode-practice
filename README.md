@@ -32,11 +32,6 @@ This tests are purely for Playwright features practice to automate interactions 
 - File :pencil:
 - Shadow :ghost:
 
-
-## Getting Started
-
-### Prerequisites
-
 ## Structure
 ### Folders
 - tests :file_folder: This folder contains actual test scripts. 
